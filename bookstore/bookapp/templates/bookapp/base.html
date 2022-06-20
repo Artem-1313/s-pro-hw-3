@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     {% load static %}
+      <link type="text/css" href="{% static 'style.css' %}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>BookStore</title>
+</head>
+<body>
+<ul>
+  <li><a href="{% url 'index' %}">Home</a></li>
+  <li><a href="{% url 'add_author' %}">Add author</a></li>
+  <li><a href="{% url 'add_book' %}">Add book</a></li>
+<li><a href="{% url 'get_authors' %}">Authors</a></li>
+</ul>
+{% block content %} {% endblock%}
+</body>
+</html>

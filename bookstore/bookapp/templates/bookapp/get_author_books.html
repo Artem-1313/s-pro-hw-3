@@ -1,0 +1,8 @@
+{% extends 'bookapp/base.html' %}
+{% block content %}
+<h1>List of books written by {{ author }} </h1>
+{% for book in author_books %}
+  <p> {{ book.title }}</p>
+{% endfor %}
+
+{% endblock%}

@@ -1,0 +1,21 @@
+{% extends 'bookapp/base.html' %}
+{% block content %}
+<div style="width:20%">
+    <h2> Find a book....</h2>
+    <form action="" method="get" >
+            <input type="text" name="search" placeholder="Enter book title...">
+            <input type="submit" id="search_btn" value="Search">
+    </form>
+</div>
+
+<h1>List of all books </h1>
+{% for book in books %}
+<div>
+Title of the book:<b>{{ book.title }}</b>
+<p>Description:{{ book.description }}</p>
+    <p> Author: {{ book.author }}</p>
+</div>
+<hr>
+{% endfor %}
+
+{% endblock%}
